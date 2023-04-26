@@ -6,5 +6,5 @@ variable "location" {
 
 variable "naming_prefix" {
   type    = string
-  default = "adevnture-prod-01"
+  default = "adevnture-nonprod-01"
 }
