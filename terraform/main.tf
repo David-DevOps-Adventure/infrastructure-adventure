@@ -9,3 +9,9 @@ resource "azurerm_resource_group" "rg" {
   location = var.location
   tags     = var.env_tags
 }
+
+resource "azurerm_resource_group" "rg2" {
+  name     = mynewRG
+  location = var.location
+  tags     = var.env_tags
+}
