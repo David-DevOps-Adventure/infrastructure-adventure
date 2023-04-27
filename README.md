@@ -51,6 +51,10 @@ Note: You can also modify the `variables.tf` file in the `terraform` folder to s
 
 The `main.tf` file contains the Terraform configuration code for the resource group deployment in Azure. The `workflow.yml` file is the GitHub Actions workflow that is triggered when changes are pushed to the repository. This workflow sets up the environment, authenticates to Azure using an SPN (Service Principal Name), and runs Terraform commands to validate, plan, and apply the infrastructure changes.
 
+## Future Enhancements/Features
+
+- Adding resource deletion functionality using Terraform and GitHub Actions.
+
 ## About Me
 
 I am a skilled DevOps engineer and full-stack developer with 3 years of experience in the industry. I have worked on a wide range of projects, from small-scale startups to large enterprise organizations, and have a proven track record of delivering high-quality, reliable solutions. With my DevOps Adventure, you can get a firsthand look at my skills and experience, and see why I am the right candidate for your next DevOps project.
