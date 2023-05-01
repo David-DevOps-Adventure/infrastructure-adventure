@@ -1,11 +1,11 @@
 # locals
 locals {
-  resource_group_name = "rg-${var.naming_prefix}"
+  test_resource_group = "rg-${var.naming_prefix}-test-${var.location}-01"
 }
 
 # resources
-resource "azurerm_resource_group" "rg" {
-  name     = local.resource_group_name
+resource "azurerm_resource_group" "test-rg" {
+  name     = local.test_resource_group
   location = var.location
-  tags     = var.env_tags
+  tags     = var.test_tags
 }
