@@ -1,9 +1,9 @@
 # vars
-variable "env_tags" {
+variable "test_tags" {
   type = map(string)
   default = {
-    Environment             = "prod"
     Deployed_with_Terraform = "true"
+    Environment             = "test"
   }
 }
 variable "location" {
@@ -13,5 +13,5 @@ variable "location" {
 
 variable "naming_prefix" {
   type    = string
-  default = "adevnture-prod-01"
+  default = "adevnture"
 }
