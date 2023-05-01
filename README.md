@@ -33,7 +33,7 @@ To write infrastructure as code for this project, I follow these steps:
 
 ## Project Structure
 
-The `main.tf` file contains the Terraform configuration code for the resource group deployment in Azure. The `workflow.yml` file is the GitHub Actions workflow that is triggered when changes are pushed to the repository. This workflow sets up the environment, authenticates to Azure using an SPN (Service Principal Name), and runs Terraform commands to validate, plan, and apply the infrastructure changes..
+The `main.tf` file contains the Terraform configuration code for the resource group deployment in Azure. The `workflow.yml` file is the GitHub Actions workflow that is triggered when changes are pushed to the repository. This workflow sets up the environment, authenticates to Azure using an SPN (Service Principal Name), and runs Terraform commands to validate, plan, and apply the infrastructure changes.
 
 ## Future Enhancements/Features:
 
