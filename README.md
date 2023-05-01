@@ -11,49 +11,33 @@ Welcome to the Infrastructure-Adventure repository! This project is a part of my
 
 ## Usage
 
-To replicate the capabilities of this repository, you can fork this repo and follow the steps below:
+To write infrastructure as code for this project, I follow these steps:
 
-### Requirements
+1. **Create a new branch**.
+2. **Navigate** to the `terraform` directory and **open** `main.tf`.
+3. **Add desired infrastructure as code** to the `main.tf` file.
 
-- [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) installed on your computer.
+   - example to add a resource group, I would use the following code:
+     `resource "azurerm_resource_group" "rg" {
+   name     = "rg-test-adevnture-eastus-01"
+   location = "eastus"
+   tags = {
+      Environment             = "test"
+      Deployed_with_Terraform = "true"
+   }
+}`
 
-### Steps
-
-1. Create an Azure storage account container to store the Terraform state by running the following commands in your Azure CLI:
-
-`az group create -n tfstates -l eastus`
-
-`az storage account create -n <ACCOUNTNAME> -g tfstates -l eastus2 --sku Standard_LRS`
-
-`az storage container create -n tfstate --account-name <ACCOUNTNAME>`
-
-2. Create an SPN (Service Principal Name) by running the following command:
-
-`az ad sp create-for-rbac --name <SPNNAME> --role Contributor --scopes /subscriptions/<SUBSCRIPTIONID>`
-
-3. Fork this repository and create repository secrets by going to the GitHub repository settings > Secrets and Variables > Actions. On the Repository Variables section, create the following variables:
-
-`ARM_CLIENT_ID = <spn client ID>`
-`ARM_CLIENT_SECRET= <SPN password>`
-`ARM_SUBSCRIPTION_ID = <Azure Subscription ID>`
-`ARM_TENANT_ID = <SPN tenant ID>`
-`CONTAINER_NAME = tfstate`
-`RESOURCE_GROUP = tfstate`
-`STORAGE_ACCOUNT = <ACCOUNTNAME>`
-
-Note: You can also modify the `variables.tf` file in the `terraform` folder to set your own variable names.
-
-4. Make changes to the infrastructure by modifying the `main.tf` file under the `terraform` folder.
-
-5. Create a branch off of the main branch, apply the changes for the needed infrastructure on the `main.tf`, and then create a pull request to the original repository. The pull request will validate the changes to prevent/mitigate failures. If everything passes, the changes will be applied and deployed through GitHub Actions on merging.
+4. Commit changes and **create a pull request**.
+5. **The Terraform workflow** will run, initializing and **validating your code**. If everything passes, I can merge your pull request.
+6. The workflow will run again, initializing, planning, and **applying your changes to deploy the infrastructure**.
 
 ## Project Structure
 
 The `main.tf` file contains the Terraform configuration code for the resource group deployment in Azure. The `workflow.yml` file is the GitHub Actions workflow that is triggered when changes are pushed to the repository. This workflow sets up the environment, authenticates to Azure using an SPN (Service Principal Name), and runs Terraform commands to validate, plan, and apply the infrastructure changes.
 
-## Future Enhancements/Features
+## Future Enhancements/Features:
 
-- Adding resource deletion functionality using Terraform and GitHub Actions.
+- Implement Azure KeyVault to store and inject the secrets to the repository.
 
 ## About Me
 
