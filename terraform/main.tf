@@ -17,5 +17,4 @@ resource "azurerm_static_site" "static_frontend_test" {
   location            = "Central US"
   sku_tier            = "Free"
   sku_size            = "Free"
-
 }
