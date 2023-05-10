@@ -1,7 +1,7 @@
 # locals
 locals {
-  resource_group = "rg-${var.naming_prefix}-${var.location}-01"
-  front_end      = "staticfrontend-${var.naming_prefix}-${var.location}-01"
+  resource_group   = "rg-${var.naming_prefix}-${var.location}-01"
+  static_front_end = "static_frontend-${var.naming_prefix}-${var.location}-01"
 }
 
 # resources
@@ -12,7 +12,7 @@ resource "azurerm_resource_group" "rg" {
 }
 
 resource "azurerm_static_site" "static_frontend" {
-  name                = local.front_end
+  name                = local.static_front_end
   resource_group_name = local.resource_group
   location            = var.location
   sku_tier            = "Free"
