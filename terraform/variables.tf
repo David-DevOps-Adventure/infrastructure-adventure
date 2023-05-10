@@ -7,7 +7,7 @@ variable "tags" {
 }
 variable "location" {
   type    = string
-  default = "Central US"
+  default = "centralus"
 }
 
 variable "naming_prefix" {
