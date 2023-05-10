@@ -5,9 +5,10 @@ on: [push, pull_request]
 jobs:
   terraform:
     name: "Terraform"
+
     runs-on: ubuntu-latest
 
-    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
+    # Use the Bash shell for GitHub Actions runner with ubuntu-latest
     # Set the working directory to main for the config files
     defaults:
       run:
