@@ -1,14 +1,13 @@
 # vars
-variable "test_tags" {
+variable "tags" {
   type = map(string)
   default = {
     Deployed_with_Terraform = "true"
-    Environment             = "test"
   }
 }
 variable "location" {
   type    = string
-  default = "eastus"
+  default = "Central US"
 }
 
 variable "naming_prefix" {
