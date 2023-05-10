@@ -1,7 +1,7 @@
 # locals
 locals {
   resource_group   = "rg-${var.naming_prefix}-${var.location}-01"
-  static_front_end = "static_frontend-${var.naming_prefix}-${var.location}-01"
+  static_front_end = "staticfe-${var.naming_prefix}-${var.location}-01"
 }
 
 # resources
