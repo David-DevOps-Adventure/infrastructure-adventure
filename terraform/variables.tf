@@ -13,5 +13,5 @@ variable "location" {
 
 variable "naming_prefix" {
   type    = string
-  default = "adevnture"
+  default = "adventure"
 }
