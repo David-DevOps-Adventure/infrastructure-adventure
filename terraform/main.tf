@@ -30,6 +30,7 @@ resource "azurerm_static_site" "test_static_front_end" {
   location            = var.location
   sku_tier            = "Free"
   sku_size            = "Free"
+  tags                = var.test_tags
 }
 
 resource "azurerm_static_site" "prod_static_front_end" {
@@ -38,4 +39,5 @@ resource "azurerm_static_site" "prod_static_front_end" {
   location            = var.location
   sku_tier            = "Free"
   sku_size            = "Free"
+  tags                = var.prod_tags
 }
