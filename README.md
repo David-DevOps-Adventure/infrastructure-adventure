@@ -9,6 +9,15 @@ Welcome to the Infrastructure-Adventure repository! This project is a part of my
 - [Azure](https://azure.microsoft.com/en-us/) as the cloud provider in which we are deploying the cloud resources.
 - [Azure Storage Accounts](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview) for storing Terraform state.
 
+## Current Infrastructure
+
+- **rg-adventure-prod-centralus-01**: This is the production rg that supports the DevOps Adventure portfolio website and the adjacent services that it relies on.
+
+  - **resources**: stapp-frontend-adventure-prod-centralus-01
+
+- **rg-adventure-test-centralus-01**: This is the test rg for the project, and it servers as development/staging environment for the the DevOps Adventure portfolio website and the adjacent services as well as a learning environment to test Azure services.
+  - **resources**: stapp-frontend-adventure-test-centralus-01
+
 ## Usage
 
 To write infrastructure as code for this project, I follow these steps:
@@ -43,6 +52,6 @@ The `main.tf` file contains the Terraform configuration code for the resource gr
 
 I am a skilled DevOps engineer and full-stack developer with 3 years of experience in the industry. I have worked on a wide range of projects, from small-scale startups to large enterprise organizations, and have a proven track record of delivering high-quality, reliable solutions. With my DevOps Adventure, you can get a firsthand look at my skills and experience, and see why I am the right candidate for your next DevOps project.
 
-Thank you for checking out my Infrastructure-Adventure repository! I hope you find it useful and informative.
+Thank you for checking out my Infrastructure-Adventure repository!
 
 `
