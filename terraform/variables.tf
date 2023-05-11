@@ -1,4 +1,6 @@
 # vars
+
+# tags
 variable "test_tags" {
   type = map(string)
   default = {
@@ -15,6 +17,7 @@ variable "prod_tags" {
   }
 }
 
+# constant values
 variable "location" {
   type    = string
   default = "centralus"
